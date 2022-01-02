@@ -4,6 +4,7 @@ Created on Sun Jan  2 18:41:33 2022
 
 @author: copet
 """
+#1
 
 numbers = [5, -2, -3, 0, 4, 1, -7, 0, 8]
 
@@ -20,7 +21,7 @@ def xy(lyst):
 xy(numbers)
 
 
-
+#2
 rectors = [['Weder', 'Fischer', 'Jarren', 'Hengartner'],
  ['Hans', 'Andreas', 'Ottfried', 'Michael'],
  [2000, 2008, 2013, 2014]]
@@ -33,7 +34,7 @@ def add(rector):
 
 add(new_rector)
 
-
+#3
 def affordable(lyst, number):
     count = 0
     for i in lyst:
@@ -49,7 +50,8 @@ if affordable(groceries, limit):
 else:
  print('Sorry, too expensive...')
  
- 
+
+#4
  
 with open('C:/Users/copet/Downloads/HS19_repeat_exam_answers/microbe_identifiers.txt') as f:
     f = f.readline().split()
@@ -60,6 +62,7 @@ with open('C:/Users/copet/Downloads/HS19_repeat_exam_answers/microbe_identifiers
         dic[i[i.find('-')+1:i.find('-')+3]].append(i[i.find('-')+1:])
     print(dic)
 
+#5
 
 import numpy as np
 im = np.array(
@@ -86,8 +89,7 @@ minny(im)
 
 
 
-
-
+#6
 hand_wash = 'You wash your hands properly by first wetting your hands under running water, soaping and rubbing your hands together until you get a lather. Rinse your hands thoroughly with running water. Dry the hands, with a clean towel, if possible a disposable paper towel or a cloth roller towel.' 
 string = ''
 for i in hand_wash:
@@ -124,6 +126,8 @@ print(f'Its positions in the text: {mostcompos}')
 print(new_text)
 
 
+
+#7 to be done
 
 
 
