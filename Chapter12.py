@@ -1,0 +1,42 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+s1='MNENLFASFIAPTILGLPAAVLIILFPPLLIPTSKYLINNRLITTQQWLIKLTSKQMMTMHNTKGRTWSLMLVSLIIFIATTNLLGLLPHSFTPTTQLSMNLAMAIPLWAGTVIMGFRSKIKNALAHFLPQGTPTPLIPMLVIIETISLLIQPMALAVRLTANITAGHLLMHLIGSATLAMSTINLPSTLIIFTILILLTILEIAVALIQAYVFTLLVSLYLHDNT'
+
+s2='MMTNLFSVFDPSTTILNLSLNWLSTFLGLLLIPFSFWLLPNRFQVVWNNILLTLHKEFKTLLGPSGHNGSTLMFISLFSLIMFNNFLGLFPYIFTSTSHLTLTLALAFPLWLSFMLYGWINHTQHMFAHLVPQGTPPVLMPFMVCIETISNVIRPGTLAVRLTANMIAGHLLLTLLGNTGPMTTNYIILSLILTTQIALLVLESAVAIIQSYVFAVLSTLYSSEVN'
+
+
+import matplotlib.pyplot as plt
+
+
+from numpy import linspace
+
+
+
+X = 1000
+Y = 100
+time = 200
+dt = 0.001
+steps = int(time/dt)
+def fox(x,y):
+    foxx = 0.0001 * X * Y -0.1 * Y
+    return foxx
+
+def rabbit(x,y):
+    rabbitt= 0.05 * X - 0.0002 * X *  Y 
+    return rabbitt
+lyst = []
+lyst2 = []
+
+for i in range(steps):
+    dX = rabbit(X,Y) * dt
+    dY = fox(X,Y) * dt
+    X += dX
+    Y += dY
+    lyst.append(X)
+    lyst2.append(Y)
+plt.figure()
+x = linspace(0,200, steps)
+plt.plot(x, lyst)
+plt.plot(x, lyst2)
+print(X,Y)
