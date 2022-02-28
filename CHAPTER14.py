@@ -90,5 +90,10 @@ for i in range(len(short)):
             print(short[i:j-1])
             
             
-            
+class dog:
+    
+    
+    def __init__(self):
+        pass
+    
             
